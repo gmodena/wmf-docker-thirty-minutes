@@ -2,25 +2,25 @@
 theme: gaia
 size: 16:9
 inlineSVG: true
-footer: Gabriele Modena, 2021
+footer: Wikimedia Foundation, 2021
 ---
 
 # A thirty minutes intro to docker
-## Gabriele Modena
-### SWE @ Wikimedia Foundation
 
 ---
+# Prerequisites
+- [Docker Engine](https://docs.docker.com/engine/install/) (Linux).
+- [Docker Desktop](https://docs.docker.com/desktop/) (macOS/Windows).
+- [Blubber](https://wikitech.wikimedia.org/wiki/Blubber).
+---
 # Follow along
+A copy of these slides, and supporting code can be found
+[here](http://nowave.it/wmf-docker-thirty-minutes) and [here](https://github.com/gmodena/wmf-docker-thirty-minutes).
 
+Quickstart:
 ```bash
 git clone git@github.com:gmodena/wmf-docker-thirty-minutes.git
 ```
-
-Prerequisites
-- Docker Engine (Linux).
-- Docker Desktop (macOS/Windows).
-- [Blubber](https://wikitech.wikimedia.org/wiki/Blubber).
-
 ---
 # What's a docker?
 A CLI to Linux capabilities and interfaces that we use to build, start and stop application containers.
@@ -72,12 +72,13 @@ variants:
 ```
 ---
 # Blubber: build & run
-- `blubber hello-blubber.yaml hello`
+- `blubber hello-blubber.yaml hello > Dockerfile`
 - `cat Dockerfile`
-- `docker build --tag blubber-tutorial-hello-world --file - .`
+- `docker build --tag blubber-tutorial-hello-world .`
 - `docker run blubber-tutorial-hello-world:latest`
 ---
 # Where to go next
-- security of docker containers
-- docker-compose
-- kubernetes
+- managing volumes and networks.
+- security of docker containers.
+- docker-compose.
+- kubernetes.
