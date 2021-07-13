@@ -10,8 +10,9 @@ docker info
 ```
 
 # Documentation build
+Documentation is rendered with [marpit](https://github.com/marp-team/marpit) and available online at https://nowave.it/wmf-docker-thirty-minutes/#1.
 
-A `Dockerfile` is provided to build the documentation under `doc`
+A `Dockerfile` is provided to build the material locally.
 ```bash
 docker build -t build-wmf-docker-thirty-minutes .
 ```
