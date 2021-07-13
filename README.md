@@ -1,5 +1,5 @@
 # wmf-docker-thirty-minutes
-A thirty minutes hands on intro to docker
+A thirty minutes hands on intro to docker. 
 
 # Prerequisites
 
@@ -7,4 +7,18 @@ To follow along this tutorial you'll need a working installation of [Docker Desk
 
 ```bash
 docker info
+```
+
+# Documentation build
+
+A `Dockerfile` is provided to build the documentation under `doc`
+```bash
+docker build -t build-wmf-docker-thirty-minutes .
+```
+
+Generate a slide deck in the container, and copy the html output
+to the host.
+```bash
+container_id=$(docker run -it --rm --detach build-wmf-docker-thirty-minutes)
+docker cp ${container_id}:/deck.html .
 ```
